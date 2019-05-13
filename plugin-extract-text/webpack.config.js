@@ -25,6 +25,6 @@ module.exports = {
   },
   plugins: [
     //Aqui van los plugins
-    new ExtractTextPlugin("css/styles.css")
+    new ExtractTextPlugin("css/[name].css")
   ]
 }
