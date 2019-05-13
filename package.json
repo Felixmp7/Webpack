@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack index.js --output bundle.js --mode development",
     "build:local": "webpack",
-    "build:external": "webpack --config ./externals/webpack.config.js"
+    "build:external": "webpack --config ./externals/webpack.config.js",
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js"
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
