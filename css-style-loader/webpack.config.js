@@ -12,7 +12,9 @@ module.exports = {
       // Aquí van los loaders
       {
         // test: que tipo de archivo quiero reconocer
+        test: /\.css$/,
         // use: que loader se va a encargar del archivo
+        use: ['css-loader'],
       }
     ]
   }
