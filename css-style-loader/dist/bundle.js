@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background: lightblue\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./css-style-loader/estilos.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background: lightblue;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  min-height: 95vh;\\n  font-size: 22px;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./css-style-loader/estilos.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
