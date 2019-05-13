@@ -7,7 +7,8 @@
   "author": "Felixmp_a <felixmanuelpachecoalonso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack index.js --output bundle.js --mode development"
+    "build": "webpack index.js --output bundle.js --mode development",
+    "build:local": "webpack"
   },
   "devDependencies": {
     "webpack": "^4.31.0",
