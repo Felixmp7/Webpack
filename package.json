@@ -6,6 +6,9 @@
   "repository": "git@github.com:Felixmp7/Webpack.git",
   "author": "Felixmp_a <felixmanuelpachecoalonso@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack index.js --output bundle.js --mode development"
+  },
   "devDependencies": {
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
