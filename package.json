@@ -1,0 +1,13 @@
+{
+  "name": "curso-de-webpack",
+  "version": "1.0.0",
+  "description": "este es un curso muy divertido",
+  "main": "index.js",
+  "repository": "git@github.com:Felixmp7/Webpack.git",
+  "author": "Felixmp_a <felixmanuelpachecoalonso@gmail.com>",
+  "license": "MIT",
+
+  "keywords": [
+    "webpack"
+  ],
+}
