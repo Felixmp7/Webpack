@@ -105,7 +105,18 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./ba
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./babel-loader/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n // console.log('Hola mundo desde Webpack');\n\nconsole.log('Hola mundo desde Webpack en webpack.config.js');\ndocument.write('Hola Mundo');\n\n//# sourceURL=webpack:///./babel-loader/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./babel-loader/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message */ \"./babel-loader/message.js\");\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_message__WEBPACK_IMPORTED_MODULE_1__);\n\n // console.log('Hola mundo desde Webpack');\n\nconsole.log('Hola mundo desde Webpack en webpack.config.js');\ndocument.write(_message__WEBPACK_IMPORTED_MODULE_1__[\"firstMessage\"]);\n\n//# sourceURL=webpack:///./babel-loader/index.js?");
+
+/***/ }),
+
+/***/ "./babel-loader/message.js":
+/*!*********************************!*\
+  !*** ./babel-loader/message.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = {\n  firstMessage: 'Hola mundo desde un modulo'\n};\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
 
 /***/ })
 
