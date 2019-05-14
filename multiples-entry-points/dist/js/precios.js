@@ -105,7 +105,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./mu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/estilos.css */ \"./multiples-entry-points/src/css/estilos.css\");\n/* harmony import */ var _css_estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n\n// console.log('Hola mundo desde Webpack');\nconsole.log('Hola mundo desde Los precios');\ndocument.write('Hola Mundo')\n\n\n//# sourceURL=webpack:///./multiples-entry-points/src/js/precios.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/estilos.css */ \"./multiples-entry-points/src/css/estilos.css\");\n/* harmony import */ var _css_estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n\n// console.log('Hola mundo desde Webpack');\nconsole.log('Hola mundo desde Los precios');\ndocument.write('Hola mundo desde Los precios')\n\n\n//# sourceURL=webpack:///./multiples-entry-points/src/js/precios.js?");
 
 /***/ })
 
