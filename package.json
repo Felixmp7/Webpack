@@ -13,13 +13,14 @@
     "build:css": "webpack --config ./css-style-loader/webpack.config.js",
     "build:extract:css": "webpack --config ./plugin-extract-text/webpack.config.js",
     "build:multi": "webpack --config ./multiples-entry-points/webpack.config.js",
-    "build:dev": "webpack --config ./webpack-dev-server/webpack.config.js --watch"
+    "build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js --watch"
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
   }
 }
