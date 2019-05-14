@@ -17,6 +17,9 @@
     "build:babel": "webpack-dev-server --config ./babel-loader/webpack.config.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "style-loader": "^0.23.1",
