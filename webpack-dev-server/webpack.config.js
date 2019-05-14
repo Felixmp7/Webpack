@@ -7,6 +7,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  devServer: {
+  	port: 9000,
+      publicPath: "/dist/",
+      open: true
+    },
   module: {
     rules: [
       // Aquí van los loaders
