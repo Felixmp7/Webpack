@@ -105,7 +105,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./ba
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./babel-loader/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message */ \"./babel-loader/message.js\");\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_message__WEBPACK_IMPORTED_MODULE_1__);\n\n // console.log('Hola mundo desde Webpack');\n\nconsole.log('Hola mundo desde Webpack en webpack.config.js');\ndocument.write(_message__WEBPACK_IMPORTED_MODULE_1__[\"firstMessage\"]);\nObject(_message__WEBPACK_IMPORTED_MODULE_1__[\"delayedMessage\"])();\n\n//# sourceURL=webpack:///./babel-loader/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./babel-loader/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _message_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message.js */ \"./babel-loader/message.js\");\n\n // console.log('Hola mundo desde Webpack');\n\nconsole.log('Hola mundo desde Webpack en webpack.config.js');\ndocument.write(_message_js__WEBPACK_IMPORTED_MODULE_1__[\"firstMessage\"]);\nObject(_message_js__WEBPACK_IMPORTED_MODULE_1__[\"delayedMessage\"])();\n\n//# sourceURL=webpack:///./babel-loader/index.js?");
 
 /***/ }),
 
@@ -113,10 +113,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 /*!*********************************!*\
   !*** ./babel-loader/message.js ***!
   \*********************************/
+/*! exports provided: firstMessage, delayedMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayedMessage\", function() { return delayedMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__);\n\nconst waitTime = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('han pasado 3 segundos');\n  }, 3000);\n});\nconst firstMessage = 'Hola mundo desde un modulo';\nconst delayedMessage = async () => {\n  const message = await waitTime;\n  console.log(message);\n  const element = document.createElement('p');\n  element.textContent = message;\n  _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default()(element);\n};\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
+
+/***/ }),
+
+/***/ "./babel-loader/render-to-dom.js":
+/*!***************************************!*\
+  !*** ./babel-loader/render-to-dom.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const waitTime = new Promise((ok, fail) => {\n  setTimeout(() => {\n    ok('han pasado 3 segundos');\n  }, 3000);\n});\nmodule.exports = {\n  firstMessage: 'Hola mundo desde un modulo',\n  delayedMessage: async () => {\n    const message = await waitTime;\n    console.log(message);\n  }\n};\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
+eval("module.exports = function renderToDOM(element) {\n  document.body.append(element);\n};\n\n//# sourceURL=webpack:///./babel-loader/render-to-dom.js?");
 
 /***/ })
 

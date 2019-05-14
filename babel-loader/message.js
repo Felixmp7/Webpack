@@ -1,13 +1,15 @@
-const waitTime = new Promise((ok,fail) => {
+import renderToDOM from './render-to-dom.js'
+
+const waitTime = new Promise((resolve,reject) => {
   setTimeout( () => {
-    ok('han pasado 3 segundos')
-  }, 3000)
+    resolve('han pasado 3 segundos')}, 3000);
 })
 
-module.exports = {
-  firstMessage: 'Hola mundo desde un modulo',
-  delayedMessage: async () => {
-    const message = await waitTime
+export const firstMessage = 'Hola mundo desde un modulo'
+export const delayedMessage = async () => {
+    const message = await waitTime;
     console.log(message);
+    const element = document.createElement('p');
+    element.textContent = message;
+    renderToDOM(element);
   }
-}
