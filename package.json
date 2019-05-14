@@ -14,7 +14,8 @@
     "build:extract:css": "webpack --config ./plugin-extract-text/webpack.config.js",
     "build:multi": "webpack --config ./multiples-entry-points/webpack.config.js",
     "build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js",
-    "build:babel": "webpack --config ./babel-loader/webpack.config.js"
+    "build:babel": "webpack --config ./babel-loader/webpack.config.js",
+    "build:images": "webpack --config ./url-loader-images/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
