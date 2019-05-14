@@ -109,6 +109,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 
 /***/ }),
 
+/***/ "./babel-loader/make-message.js":
+/*!**************************************!*\
+  !*** ./babel-loader/make-message.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction makeMessage(msg) {\n  const element = document.createElement('p');\n  element.textContent = msg;\n  return element;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (makeMessage);\n\n//# sourceURL=webpack:///./babel-loader/make-message.js?");
+
+/***/ }),
+
 /***/ "./babel-loader/message.js":
 /*!*********************************!*\
   !*** ./babel-loader/message.js ***!
@@ -117,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayedMessage\", function() { return delayedMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__);\n\nconst waitTime = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('han pasado 3 segundos');\n  }, 3000);\n});\nconst firstMessage = 'Hola mundo desde un modulo';\nconst delayedMessage = async () => {\n  const message = await waitTime;\n  console.log(message);\n  const element = document.createElement('p');\n  element.textContent = message;\n  _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default()(element);\n};\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayedMessage\", function() { return delayedMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _make_message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./make-message */ \"./babel-loader/make-message.js\");\n\n\nconst waitTime = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('han pasado 3 segundos');\n  }, 3000);\n});\nconst firstMessage = 'Hola mundo desde un modulo';\nconst delayedMessage = async () => {\n  const message = await waitTime;\n  console.log(message); // const element = document.createElement('p');\n  // element.textContent = message;\n\n  _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0___default()(Object(_make_message__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(message));\n};\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
 
 /***/ }),
 
