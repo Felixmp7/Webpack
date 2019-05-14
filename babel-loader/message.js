@@ -12,6 +12,5 @@ export const delayedMessage = async () => {
     console.log(message);
     // const element = document.createElement('p');
     // element.textContent = message;
-
     renderToDOM(makeMessage(message));
   }
