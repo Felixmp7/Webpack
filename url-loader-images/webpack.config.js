@@ -23,6 +23,15 @@ module.exports = {
         }
       },
       {
+        test: /\.(jpg|png|gif)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 150000
+          }
+        }
+      },
+      {
         // test: que tipo de archivo quiero reconocer
         test: /\.css$/,
         // use: que loader se va a encargar del archivo
