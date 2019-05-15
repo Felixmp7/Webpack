@@ -18,7 +18,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [["@babel/preset-env",'react', { "targets": { "node": "current" } }]]
+            presets: [["@babel/preset-env",'@babel/react', { "targets": { "node": "current" } }]]
           }
         }
       },
