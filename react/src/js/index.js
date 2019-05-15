@@ -7,21 +7,27 @@ import renderToDom from './render-to-dom'
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-class Teachers extends Component{
-  render(){
-    return(
-      <ul className="Teachers">
-
-      </ul>
-    )
-  }
-}
-
 const Teacher = props => (
   <li className="Teacher">
     {props.name} <a href={`https://twitter.com/${props.twitter}`}>props.twitter</a>
   </li>
 )
+
+class Teachers extends Component{
+  render(){
+    return(
+      <ul className="Teachers">
+        {
+          this.props.data.teachers.map( teacherData => {
+            return <Teacher {...teacherData}/>
+          })
+        }
+      </ul>
+    )
+  }
+}
+
+render(<Teachers/>,document.getElementById('root'))
 
 console.log(data);
 
