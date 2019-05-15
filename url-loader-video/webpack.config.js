@@ -39,7 +39,7 @@ module.exports = {
             limit: 150000,
             // name: Indicamos en donde van a entrar los archivos que no estén dentro
             // del margen de limit
-            name: 'videos/[name].[hash]'
+            name: 'videos/[name].[hash].[ext]'
           }
         }
       },
