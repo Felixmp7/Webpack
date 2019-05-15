@@ -2,7 +2,6 @@
     font-family: 'open_sansregular';
     src: url('./fonts/OpenSans-Regular-webfont.eot');
     src: url('./fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/OpenSans-Regular-webfont.woff2') format('woff2'),
          url('./fonts/OpenSans-Regular-webfont.woff') format('woff'),
          url('./fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
          url('./fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
@@ -17,7 +16,8 @@ body {
   justify-content: center;
   min-height: 95vh;
   font-size: 22px;
-  background-image: url('./banner1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url('./banner1.jpg'); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  font-family: 'open_sansregular';
 }
