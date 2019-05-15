@@ -1,6 +1,6 @@
-import './estilos.css'
+import '../css/estilos.css'
 import { firstMessage, delayedMessage } from './message.js'
-import banner from './banner1.jpg'
+import banner from '../images/banner1.jpg'
 
 const img = document.createElement('img')
 img.setAttribute('src', banner)
