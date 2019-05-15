@@ -4,7 +4,7 @@ import banner from '../images/banner1.jpg'
 import data from './teachers.json'
 import renderToDom from './render-to-dom'
 
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 import Teachers from './components/Teachers'
 
