@@ -9,7 +9,7 @@ import { render } from 'react-dom'
 import Teachers from './components/Teachers'
 
 
-render(<Teachers/>,document.getElementById('root'))
+render(<Teachers data={data}/>,document.getElementById('root'))
 
 console.log(data);
 
