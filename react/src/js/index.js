@@ -6,21 +6,8 @@ import renderToDom from './render-to-dom'
 
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import Teacher from './components/Teacher'
+import Teachers from './components/Teachers'
 
-class Teachers extends Component{
-  render(){
-    return(
-      <ul className="Teachers">
-        {
-          this.props.data.teachers.map( teacherData => {
-            return <Teacher {...teacherData}/>
-          })
-        }
-      </ul>
-    )
-  }
-}
 
 render(<Teachers/>,document.getElementById('root'))
 
