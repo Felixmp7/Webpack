@@ -4,6 +4,25 @@ import banner from '../images/banner1.jpg'
 import data from './teachers.json'
 import renderToDom from './render-to-dom'
 
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+
+class Teachers extends Component{
+  render(){
+    return(
+      <ul className="Teachers">
+
+      </ul>
+    )
+  }
+}
+
+const Teacher = props => (
+  <li className="Teacher">
+    {props.name} <a href={`https://twitter.com/${props.twitter}`}>props.twitter</a>
+  </li>
+)
+
 console.log(data);
 
 data.teachers.forEach( teacher => {
