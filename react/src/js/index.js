@@ -6,12 +6,7 @@ import renderToDom from './render-to-dom'
 
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-
-const Teacher = props => (
-  <li className="Teacher">
-    {props.name} <a href={`https://twitter.com/${props.twitter}`}>props.twitter</a>
-  </li>
-)
+import Teacher from './components/Teacher'
 
 class Teachers extends Component{
   render(){
