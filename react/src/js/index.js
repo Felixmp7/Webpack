@@ -6,10 +6,10 @@ import renderToDom from './render-to-dom'
 
 import React from 'react'
 import { render } from 'react-dom'
-import Teachers from './components/Teachers'
+import Teachers from './components/Teachers.js'
 
 
-render(<Teachers data={data}/>,document.getElementById('root'))
+render( <Teachers data={data.teachers}/>,document.getElementById('root'));
 
 console.log(data);
 
