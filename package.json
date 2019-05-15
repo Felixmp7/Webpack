@@ -18,7 +18,8 @@
     "build:images": "webpack --config ./url-loader-images/webpack.config.js --watch",
     "build:fonts": "webpack --config ./url-loader-fonts/webpack.config.js --watch",
     "build:video": "webpack --config ./url-loader-video/webpack.config.js",
-    "build:json": "webpack --config ./json/webpack.config.js"
+    "build:json": "webpack --config ./json/webpack.config.js",
+    "build:react": "webpack --config ./react/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
