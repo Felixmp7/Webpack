@@ -6,7 +6,7 @@ class Teachers extends Component{
     return(
       <ul className="Teachers">
         {
-          this.props.data.teachers.map( teacherData => {
+          this.props.data.map( teacherData => {
             return <Teacher {...teacherData}/>
           })
         }
