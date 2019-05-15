@@ -16,6 +16,7 @@ body {
   justify-content: center;
   min-height: 95vh;
   font-size: 22px;
+  flex-direction: column;
   /* background-image: url('./banner1.jpg'); */
   /* background-size: cover; */
   /* background-repeat: no-repeat; */
