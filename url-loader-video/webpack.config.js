@@ -36,7 +36,10 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 150000
+            limit: 150000,
+            // name: Indicamos en donde van a entrar los archivos que no estén dentro
+            // del margen de limit
+            name: 'videos/[name]'
           }
         }
       },
