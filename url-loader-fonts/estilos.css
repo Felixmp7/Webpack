@@ -1,0 +1,11 @@
+body {
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  font-size: 22px;
+  background-image: url('./banner1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
