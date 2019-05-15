@@ -40,6 +40,9 @@ module.exports = {
             // name: Indicamos en donde van a entrar los archivos que no estén dentro
             // del margen de limit
             name: 'videos/[name].[hash].[ext]'
+            // hash = permite crear archivos nuevos cada vez que compile, ésto
+            // puede ser ventajoso porque se elimina el caché del navegador
+            // ext = toma la extension del archivo original al momento de compilar.
           }
         }
       },
