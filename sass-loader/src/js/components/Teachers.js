@@ -1,5 +1,6 @@
 import React , {Component} from 'react'
 import Teacher from './Teacher'
+import '../../css/Teachers.sass'
 
 class Teachers extends Component{
   render(){
