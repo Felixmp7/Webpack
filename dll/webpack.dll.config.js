@@ -5,16 +5,15 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    vendor: [
+    modules: [
       'react',
       'react-dom',
     ],
-    home: path.resolve(__dirname, 'src/js/index.js'),
-    contact: path.resolve(__dirname, 'src/js/contact.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    library: '[name]'
   },
  // module: {
  //    rules: [
