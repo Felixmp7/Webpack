@@ -20,7 +20,8 @@
     "build:video": "webpack --config ./url-loader-video/webpack.config.js",
     "build:json": "webpack --config ./json/webpack.config.js",
     "build:react": "webpack --config ./react/webpack.config.js",
-    "build:sass": "webpack --config ./sass-loader/webpack.config.js"
+    "build:sass": "webpack --config ./sass-loader/webpack.config.js",
+    "build:prevent": "webpack --config ./prevent-duplication/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
