@@ -5,7 +5,14 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    vendor: ['react','react-dom'],
+    vendor: [
+      'react',
+      'react-dom',
+      //jquery,
+      //bootstrap,
+      //immutable,
+      //etc.
+    ],
     home: path.resolve(__dirname, 'src/js/index.js'),
     contact: path.resolve(__dirname, 'src/js/contact.js')
   },
