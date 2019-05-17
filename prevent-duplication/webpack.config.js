@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   entry: {
     home: path.resolve(__dirname, 'src/js/index.js'),
-    contact: path.resolve(__dirname, 'src/js/contact.js'),
+    contact: path.resolve(__dirname, 'src/js/contact.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -58,4 +58,5 @@ module.exports = {
         name: "common",
         chunks: "initial"
     }
+  }
 }
