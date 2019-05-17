@@ -21,7 +21,8 @@
     "build:json": "webpack --config ./json/webpack.config.js",
     "build:react": "webpack --config ./react/webpack.config.js",
     "build:sass": "webpack --config ./sass-loader/webpack.config.js",
-    "build:prevent": "webpack --config ./prevent-duplication/webpack.config.js"
+    "build:prevent": "webpack --config ./prevent-duplication/webpack.config.js",
+    "build:ventor": "webpack --config ./dependencias-comunes/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
