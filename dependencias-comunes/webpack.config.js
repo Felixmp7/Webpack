@@ -4,6 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
+  vendor: ['react','react-dom'],
   entry: {
     home: path.resolve(__dirname, 'src/js/index.js'),
     contact: path.resolve(__dirname, 'src/js/contact.js')
@@ -54,9 +55,15 @@ module.exports = {
     new ExtractTextPlugin("css/[name].css")
   ],
   optimization: {
-    splitChunks: {
-        name: "common",
-        chunks: "initial"
+        splitChunks: {
+            cacheGroups:{
+                vendor:{
+                    chunks: 'initial',
+                    name: 'vendor',
+                    test: 'vendor',
+                    enforce: true
+                }
+            }
+        }
     }
-  }
 }
