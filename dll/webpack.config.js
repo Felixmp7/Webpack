@@ -5,14 +5,14 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    vendor: [
-      'react',
-      'react-dom',
-      //jquery,
-      //bootstrap,
-      //immutable,
-      //etc.
-    ],
+    // vendor: [
+    //   'react',
+    //   'react-dom',
+    //   //jquery,
+    //   //bootstrap,
+    //   //immutable,
+    //   //etc.
+    // ],
     home: path.resolve(__dirname, 'src/js/index.js'),
     contact: path.resolve(__dirname, 'src/js/contact.js')
   },
@@ -64,11 +64,11 @@ module.exports = {
       manifest: require('./modules-manifest.json')
     })
   ],
-  optimization: {
-    splitChunks: {
-      minChunks: 2,
-      name: "vendor",
-      chunks: "initial"
-    }
-  }
+  // optimization: {
+  //   splitChunks: {
+  //     minChunks: 2,
+  //     name: "vendor",
+  //     chunks: "initial"
+  //   }
+  // }
 }
