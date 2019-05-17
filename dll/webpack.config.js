@@ -59,7 +59,10 @@ module.exports = {
   },
   plugins: [
     //Aqui van los plugins
-    new ExtractTextPlugin("css/[name].css")
+    new ExtractTextPlugin("css/[name].css"),
+    new webpack.DllReferencePlugin({
+      manifest: require('./modules-manifest.json')
+    })
   ],
   optimization: {
     splitChunks: {
