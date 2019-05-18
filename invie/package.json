@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Felix Pacheco",
   "license": "MIT",
+  "scripts": {
+    "build:dev": "webpack-dev-server --config ./webpack.dev.config.js"
+  },
   "dependencies": {
     "cheet.js": "0.3.3",
     "react": "15.4.2",
