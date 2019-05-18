@@ -11,5 +11,18 @@ module.exports = {
     //Cómo se van a llamar nuestros archivos? => De forma dinámica
     filename: 'js/[name].js'
   },
-
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [["@babel/preset-env",{ "targets": { "node": "current" } }], '@babel/react'],
+            plugins: ['syntax-dynamic-import']
+          }
+        }
+      },
+    ]
+  }
 }
