@@ -8,7 +8,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import Teachers from './components/Teachers.js'
 
-$button = document.getElementById('dynamic')
+const $button = document.getElementById('dynamic')
 $button.addEventListener('click', async () => {
   const {default: alerta} = await import('./alerta.js') //La ruta es relativa
   alerta()
