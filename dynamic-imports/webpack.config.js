@@ -5,14 +5,6 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    // vendor: [
-    //   'react',
-    //   'react-dom',
-    //   //jquery,
-    //   //bootstrap,
-    //   //immutable,
-    //   //etc.
-    // ],
     home: path.resolve(__dirname, 'src/js/index.js'),
     contact: path.resolve(__dirname, 'src/js/contact.js')
   },
@@ -22,11 +14,8 @@ module.exports = {
   },
   module: {
     rules: [
-      // Aquí van los loaders
       {
-        // test: que tipo de archivo quiero reconocer
         test: /\.js$/,
-        // use: que loader se va a encargar del archivo
         use: {
           loader: 'babel-loader',
           options: {
@@ -58,17 +47,9 @@ module.exports = {
     ]
   },
   plugins: [
-    //Aqui van los plugins
     new ExtractTextPlugin("css/[name].css"),
     new webpack.DllReferencePlugin({
       manifest: require('./modules-manifest.json')
     })
   ],
-  // optimization: {
-  //   splitChunks: {
-  //     minChunks: 2,
-  //     name: "vendor",
-  //     chunks: "initial"
-  //   }
-  // }
 }
