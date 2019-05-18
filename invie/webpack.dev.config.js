@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: {
     // Desde donde arranca la app? => index.js
     invie: path.resolve(__dirname, 'src/index.js')
@@ -11,10 +12,14 @@ module.exports = {
     //Cómo se van a llamar nuestros archivos? => De forma dinámica
     filename: 'js/[name].js'
   },
+  devServer:{
+    port: 7000
+  } ,
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
