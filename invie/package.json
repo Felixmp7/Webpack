@@ -1,0 +1,8 @@
+{
+  "name": "invie-webpack",
+  "version": "1.0.0",
+  "description": "configuracion de webpack en invie",
+  "main": "index.js",
+  "author": "Felix Pacheco",
+  "license": "MIT"
+}
