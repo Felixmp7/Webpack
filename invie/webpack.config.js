@@ -1,4 +1,5 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,8 @@ module.exports = {
     //A donde va a mandar mis archivos?
     path: path.resolve(__dirname, 'dist'),
     //Cómo se van a llamar nuestros archivos? => De forma dinámica
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
+    publicPath: path.resolve(__dirname, 'dist')+'/'
   },
   devServer:{
     port: 7000
@@ -30,7 +32,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ExtractTextPlugin.extract({
+          use: {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+              modules: true
+            }
+          }
+        })
       },
       {
         test: /\.(jpg|png|gif|svg)$/,
@@ -46,5 +56,8 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('css/[name].css')
+  ]
 }
