@@ -12,7 +12,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     //Cómo se van a llamar nuestros archivos? => De forma dinámica
     filename: 'js/[name].js',
-    publicPath: path.resolve(__dirname, 'dist')+'/'
+    publicPath: path.resolve(__dirname, 'dist')+'/',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   devServer:{
     port: 7000
