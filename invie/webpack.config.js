@@ -1,9 +1,16 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebPackPlugin = require('clean-webpack-plugin');
 
 const plugins = [
   new ExtractTextPlugin('css/[name].css')
 ]
+
+if (env.NODE_ENV === 'production') {
+  plugins.push(
+    new CleanWebPackPlugin(['dist'], {root: __dirname})
+  )
+}
 
 module.exports = {
   mode: 'development',
