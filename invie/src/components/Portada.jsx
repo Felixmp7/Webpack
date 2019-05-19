@@ -69,4 +69,3 @@ class Portada extends Component {
 }
 
 export default connect(mapStateToProps)(Portada);
-
