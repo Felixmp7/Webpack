@@ -1,72 +1,71 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebPackPlugin = require('clean-webpack-plugin');
 
-const plugins = [
-  new ExtractTextPlugin('css/[name].css')
-]
-
-if (env.NODE_ENV === 'production') {
-  plugins.push(
-    new CleanWebPackPlugin(['dist'], {root: __dirname})
-  )
+let config = {
+	plugins: [
+		new MiniCssExtractPlugin({
+	    filename: "./css/[name].[hash].css",
+	    chunkFilename: "[id].[chunkhash].css"
+	  })
+	],
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin(),
+			new OptimizeCSSAssetsPlugin({})
+		]
+	},
+	entry: {
+		invie: path.resolve(__dirname, 'src/index.js'),
+	},
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'js/[name].[hash].js',
+		publicPath: path.resolve(__dirname, 'dist')+"/",
+		chunkFilename: 'js/[id].[chunkhash].js',
+	},
+	module: {
+		rules: [
+			{
+		      test: /\.(js|jsx)$/,
+		      exclude: /(node_modules)/,
+		      use: {
+		        loader: 'babel-loader',
+		        options: {
+		          presets: ['env','react','stage-2']
+		        }
+		      }
+		    },
+		    {
+	        test: /\.css$/,
+	        use: [
+	          MiniCssExtractPlugin.loader,
+	          "css-loader"
+	        ]
+	      },
+		    {
+	        test: /\.(jpg|png|gif|woff|eot|ttf|svg)$/,
+	        use: {
+	          loader: 'url-loader',
+	          options: {
+	            limit: 1000000,
+	            fallback: 'file-loader',
+	            name: 'images/[name].[hash].[ext]',
+	          }
+	        },
+	      }
+		]
+	}
 }
 
-module.exports = {
-  mode: 'development',
-  entry: {
-    // Desde donde arranca la app? => index.js
-    invie: path.resolve(__dirname, 'src/index.js')
-  },
-  output: {
-    //A donde va a mandar mis archivos?
-    path: path.resolve(__dirname, 'dist'),
-    //Cómo se van a llamar nuestros archivos? => De forma dinámica
-    filename: 'js/[name].js',
-    publicPath: path.resolve(__dirname, 'dist')+'/',
-    chunkFilename: 'js/[id].[chunkhash].js'
-  },
-  devServer:{
-    port: 7000
-  } ,
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [["@babel/preset-env",{ "targets": { "node": "current" } }], '@babel/react'],
-            plugins: ['syntax-dynamic-import']
-          }
-        }
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {modules: true}
-            }
-          ]
-        })
-      },
-      {
-        test: /\.(jpg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1000000,
-              fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]',
-            }
-          }
-        ]
-      }
-    ]
-  },
-  plugins
+
+module.exports = (env, argv) => {
+	if (argv.mode === 'production') {
+		config.plugins.push(
+			new CleanWebPackPlugin(['dist'], {root:__dirname})
+		)
+	}
+	return config
 }
